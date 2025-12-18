@@ -41,18 +41,18 @@ h1, h2, h3, h4, nav {
 header {
     background: linear-gradient(135deg, var(--primary-color), #1a252f);
     color: white;
-    padding: 1.5rem 0; /* Уменьшено с 3rem */
+    padding: 1.5rem 0;
     text-align: center;
     border-bottom: 5px solid var(--secondary-color);
 }
 
 header h1 {
-    font-size: 1.8rem; /* Уменьшено с 2.5rem */
-    margin-bottom: 0.5rem; /* Уменьшено */
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
 }
 
 header .tagline {
-    font-size: 1rem; /* Уменьшено с 1.2rem */
+    font-size: 1rem;
     opacity: 0.9;
     max-width: 800px;
     margin: 0 auto;
@@ -93,31 +93,40 @@ header .tagline {
 .messenger-btn.telegram { background-color: var(--telegram-color); }
 .messenger-btn.vk { background-color: var(--vk-color); }
 
-/* Навигация */
+/* НАВИГАЦИЯ - ИСПРАВЛЕНА ДЛЯ МОБИЛЬНЫХ */
 nav {
     background-color: white;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 100;
+    overflow-x: auto; /* Для горизонтальной прокрутки на мобилках */
+    -webkit-overflow-scrolling: touch; /* Плавная прокрутка на iOS */
 }
 
 nav .container {
+    padding: 0;
+}
+
+.nav-wrapper {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    padding: 1rem 20px;
+    padding: 0.8rem 20px;
+    min-width: min-content; /* Чтобы не сжималось на мобилках */
 }
 
 nav a {
     color: var(--primary-color);
     text-decoration: none;
-    padding: 0.9rem 1.8rem;
-    margin: 0 0.5rem;
+    padding: 0.6rem 1.2rem; /* Уменьшены отступы */
+    margin: 0 0.3rem; /* Уменьшены отступы между кнопками */
     border-radius: 50px;
     font-weight: 600;
+    font-size: 0.9rem; /* Чуть уменьшен шрифт */
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    white-space: nowrap; /* Чтобы текст не переносился */
+    flex-shrink: 0; /* Чтобы кнопки не сжимались */
 }
 
 nav a:hover {
@@ -128,13 +137,13 @@ nav a:hover {
 
 /* Основной контент */
 main {
-    padding: 2rem 0; /* Уменьшено с 3rem */
+    padding: 2rem 0;
 }
 
 section {
-    margin-bottom: 2rem; /* Уменьшено с 3rem */
+    margin-bottom: 2rem;
     background: white;
-    padding: 2rem; /* Уменьшено с 2.5rem */
+    padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: 0 8px 25px rgba(0,0,0,0.06);
 }
@@ -143,8 +152,8 @@ h2 {
     color: var(--primary-color);
     border-bottom: 3px solid var(--secondary-color);
     padding-bottom: 0.8rem;
-    margin-bottom: 1.5rem; /* Уменьшено */
-    font-size: 1.7rem; /* Уменьшено с 1.9rem */
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -154,14 +163,14 @@ h2 {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem; /* Уменьшено */
-    margin-top: 1.5rem; /* Уменьшено */
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .service-card {
     border: 1px solid #e0e0e0;
     border-radius: var(--border-radius);
-    padding: 1.5rem; /* Уменьшено */
+    padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #fdfdfd;
 }
@@ -174,8 +183,8 @@ h2 {
 
 .service-card h3 {
     color: var(--secondary-color);
-    margin-bottom: 0.8rem; /* Уменьшено */
-    font-size: 1.2rem; /* Уменьшено */
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -183,13 +192,13 @@ h2 {
 
 /* Процесс работы */
 .process-list {
-    margin-left: 1.5rem; /* Уменьшено */
-    margin-top: 1rem; /* Уменьшено */
-    font-size: 1rem; /* Уменьшено */
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 
 .process-list li {
-    margin-bottom: 1rem; /* Уменьшено */
+    margin-bottom: 1rem;
     padding-left: 0.5rem;
     line-height: 1.6;
 }
@@ -199,7 +208,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin: 1.5rem 0; /* Уменьшено */
+    margin: 1.5rem 0;
 }
 
 .btn {
@@ -207,14 +216,14 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    padding: 0.9rem 1.8rem; /* Уменьшено */
+    padding: 0.9rem 1.8rem;
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    font-size: 1rem; /* Уменьшено */
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -233,13 +242,13 @@ h2 {
 .feedback-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Уменьшено */
-    margin-top: 1.5rem; /* Уменьшено */
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .feedback-form input,
 .feedback-form textarea {
-    padding: 0.9rem 1.2rem; /* Уменьшено */
+    padding: 0.9rem 1.2rem;
     border: 2px solid #e0e0e0;
     border-radius: var(--border-radius);
     font-family: 'Open Sans', sans-serif;
@@ -255,12 +264,12 @@ h2 {
 
 /* Контакты */
 .contact-info {
-    margin-top: 1.5rem; /* Уменьшено */
-    font-size: 1rem; /* Уменьшено */
+    margin-top: 1.5rem;
+    font-size: 1rem;
 }
 
 .contact-info p {
-    margin-bottom: 1rem; /* Уменьшено */
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -283,8 +292,8 @@ footer {
     background-color: var(--dark-color);
     color: white;
     text-align: center;
-    padding: 2rem 0; /* Уменьшено */
-    margin-top: 3rem; /* Уменьшено */
+    padding: 2rem 0;
+    margin-top: 3rem;
 }
 
 footer .disclaimer {
@@ -312,7 +321,8 @@ footer .disclaimer {
     opacity: 1;
 }
 
-/* Адаптивность */
+/* АДАПТИВНОСТЬ - ИСПРАВЛЕНА МОБИЛЬНАЯ НАВИГАЦИЯ */
+
 @media (max-width: 992px) {
     .messenger-buttons {
         right: 15px;
@@ -326,9 +336,10 @@ footer .disclaimer {
     }
 }
 
+/* Для планшетов и мобилок */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.6rem; /* Уменьшено */
+        font-size: 1.6rem;
     }
     
     .messenger-buttons {
@@ -343,16 +354,20 @@ footer .disclaimer {
         font-size: 22px;
     }
     
-    nav .container {
-        flex-direction: column;
-        align-items: center;
+    /* НАВИГАЦИЯ НА МОБИЛКАХ - ГОРИЗОНТАЛЬНАЯ С ПРОКРУТКОЙ */
+    nav {
+        padding: 0;
+    }
+    
+    .nav-wrapper {
+        justify-content: flex-start; /* Выравнивание по левому краю */
+        padding: 0.7rem 15px; /* Ещё уменьшили отступы */
     }
     
     nav a {
-        margin: 0.3rem;
-        width: 100%;
-        text-align: center;
-        padding: 0.9rem;
+        padding: 0.5rem 0.9rem; /* Минимальные отступы */
+        margin: 0 0.2rem; /* Минимальные отступы между кнопками */
+        font-size: 0.85rem; /* Чуть меньше шрифт */
     }
     
     .services-grid {
@@ -369,24 +384,46 @@ footer .disclaimer {
     }
     
     section {
-        padding: 1.5rem; /* Уменьшено */
+        padding: 1.5rem;
     }
     
     h2 {
-        font-size: 1.5rem; /* Уменьшено */
+        font-size: 1.5rem;
     }
 }
 
+/* Для маленьких мобилок */
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.5rem; /* Уменьшено */
+        font-size: 1.5rem;
     }
     
     header .tagline {
-        font-size: 0.9rem; /* Уменьшено */
+        font-size: 0.9rem;
     }
     
     .messenger-buttons {
         bottom: 70px;
+    }
+    
+    /* ЕЩЁ КОМПАКТНЕЕ НАВИГАЦИЯ ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ */
+    .nav-wrapper {
+        padding: 0.6rem 10px;
+    }
+    
+    nav a {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Уменьшаем отступы в секциях для очень маленьких экранов */
+    section {
+        padding: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
     }
 }
