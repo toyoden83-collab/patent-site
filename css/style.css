@@ -6,7 +6,7 @@
     --success-color: #27ae60;
     --whatsapp-color: #25D366;
     --telegram-color: #0088cc;
-    --viber-color: #7360f2;
+    --vk-color: #4a76a8;
     --light-color: #ecf0f1;
     --dark-color: #2c3e50;
     --text-color: #333;
@@ -37,22 +37,22 @@ h1, h2, h3, h4, nav {
     padding: 0 20px;
 }
 
-/* Шапка */
+/* КОМПАКТНАЯ ШАПКА */
 header {
     background: linear-gradient(135deg, var(--primary-color), #1a252f);
     color: white;
-    padding: 3rem 0;
+    padding: 1.5rem 0; /* Уменьшено с 3rem */
     text-align: center;
     border-bottom: 5px solid var(--secondary-color);
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem; /* Уменьшено с 2.5rem */
+    margin-bottom: 0.5rem; /* Уменьшено */
 }
 
 header .tagline {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Уменьшено с 1.2rem */
     opacity: 0.9;
     max-width: 800px;
     margin: 0 auto;
@@ -91,7 +91,7 @@ header .tagline {
 
 .messenger-btn.whatsapp { background-color: var(--whatsapp-color); }
 .messenger-btn.telegram { background-color: var(--telegram-color); }
-.messenger-btn.viber { background-color: var(--viber-color); }
+.messenger-btn.vk { background-color: var(--vk-color); }
 
 /* Навигация */
 nav {
@@ -128,13 +128,13 @@ nav a:hover {
 
 /* Основной контент */
 main {
-    padding: 3rem 0;
+    padding: 2rem 0; /* Уменьшено с 3rem */
 }
 
 section {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem; /* Уменьшено с 3rem */
     background: white;
-    padding: 2.5rem;
+    padding: 2rem; /* Уменьшено с 2.5rem */
     border-radius: var(--border-radius);
     box-shadow: 0 8px 25px rgba(0,0,0,0.06);
 }
@@ -143,8 +143,8 @@ h2 {
     color: var(--primary-color);
     border-bottom: 3px solid var(--secondary-color);
     padding-bottom: 0.8rem;
-    margin-bottom: 1.8rem;
-    font-size: 1.9rem;
+    margin-bottom: 1.5rem; /* Уменьшено */
+    font-size: 1.7rem; /* Уменьшено с 1.9rem */
     display: flex;
     align-items: center;
     gap: 12px;
@@ -154,14 +154,14 @@ h2 {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.8rem;
-    margin-top: 1.8rem;
+    gap: 1.5rem; /* Уменьшено */
+    margin-top: 1.5rem; /* Уменьшено */
 }
 
 .service-card {
     border: 1px solid #e0e0e0;
     border-radius: var(--border-radius);
-    padding: 1.8rem;
+    padding: 1.5rem; /* Уменьшено */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #fdfdfd;
 }
@@ -174,8 +174,8 @@ h2 {
 
 .service-card h3 {
     color: var(--secondary-color);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
+    margin-bottom: 0.8rem; /* Уменьшено */
+    font-size: 1.2rem; /* Уменьшено */
     display: flex;
     align-items: center;
     gap: 12px;
@@ -183,15 +183,15 @@ h2 {
 
 /* Процесс работы */
 .process-list {
-    margin-left: 2rem;
-    margin-top: 1.5rem;
-    font-size: 1.1rem;
+    margin-left: 1.5rem; /* Уменьшено */
+    margin-top: 1rem; /* Уменьшено */
+    font-size: 1rem; /* Уменьшено */
 }
 
 .process-list li {
-    margin-bottom: 1.2rem;
-    padding-left: 0.8rem;
-    line-height: 1.7;
+    margin-bottom: 1rem; /* Уменьшено */
+    padding-left: 0.5rem;
+    line-height: 1.6;
 }
 
 /* Блок обратной связи */
@@ -199,7 +199,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin: 2rem 0;
+    margin: 1.5rem 0; /* Уменьшено */
 }
 
 .btn {
@@ -207,14 +207,14 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    padding: 1rem 2rem;
+    padding: 0.9rem 1.8rem; /* Уменьшено */
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    font-size: 1.05rem;
+    font-size: 1rem; /* Уменьшено */
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -233,13 +233,13 @@ h2 {
 .feedback-form {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-    margin-top: 2rem;
+    gap: 1rem; /* Уменьшено */
+    margin-top: 1.5rem; /* Уменьшено */
 }
 
 .feedback-form input,
 .feedback-form textarea {
-    padding: 1rem 1.5rem;
+    padding: 0.9rem 1.2rem; /* Уменьшено */
     border: 2px solid #e0e0e0;
     border-radius: var(--border-radius);
     font-family: 'Open Sans', sans-serif;
@@ -255,15 +255,15 @@ h2 {
 
 /* Контакты */
 .contact-info {
-    margin-top: 1.8rem;
-    font-size: 1.1rem;
+    margin-top: 1.5rem; /* Уменьшено */
+    font-size: 1rem; /* Уменьшено */
 }
 
 .contact-info p {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem; /* Уменьшено */
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 15px;
 }
 
 .contact-info a {
@@ -283,8 +283,8 @@ footer {
     background-color: var(--dark-color);
     color: white;
     text-align: center;
-    padding: 2.5rem 0;
-    margin-top: 4rem;
+    padding: 2rem 0; /* Уменьшено */
+    margin-top: 3rem; /* Уменьшено */
 }
 
 footer .disclaimer {
@@ -328,7 +328,7 @@ footer .disclaimer {
 
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 1.6rem; /* Уменьшено */
     }
     
     .messenger-buttons {
@@ -369,21 +369,21 @@ footer .disclaimer {
     }
     
     section {
-        padding: 1.8rem;
+        padding: 1.5rem; /* Уменьшено */
     }
     
     h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem; /* Уменьшено */
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.7rem;
+        font-size: 1.5rem; /* Уменьшено */
     }
     
     header .tagline {
-        font-size: 1rem;
+        font-size: 0.9rem; /* Уменьшено */
     }
     
     .messenger-buttons {
